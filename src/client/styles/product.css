@@ -14,6 +14,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 
 .product-image {
@@ -21,6 +22,7 @@
   height: 160px;
   object-fit: contain;
   border-radius: 8px;
+  position: relative;
 }
 
 .product-title {
@@ -61,4 +63,21 @@
 
 .count{
  transform: translate(0,3px);
+}
+
+.add-cart-button{
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 7px;
+  border: none;
+  transition: .3s ease;
+}
+.add-cart-button:hover{
+  background-color: #dddada;
+  border: none;
 }
