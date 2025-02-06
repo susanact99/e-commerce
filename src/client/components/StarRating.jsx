@@ -1,6 +1,6 @@
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 
-export function StarRating({ rating }) {
+export function StarRating({ rating, count }) {
   const maxStars = 5;
   const fullStars = Math.floor(rating);
   const hasHalfStar = rating % 1 !== 0;
@@ -15,6 +15,7 @@ export function StarRating({ rating }) {
       {[...Array(emptyStars)].map((_, i) => (
         <FaRegStar key={`empty-${i}`} className="star empty" />
       ))}
+      <span className="count"> ({count})</span>
     </div>
   );
 }

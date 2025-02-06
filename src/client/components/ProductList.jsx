@@ -26,7 +26,9 @@ export function ProductList() {
           key={product.id}
           image={product.image}
           title={product.title}
-          price={product.price} />
+          price={product.price}
+          rating={product.rating?.rate}
+          count={product.rating?.count} />
       ))}
     </div>
   );

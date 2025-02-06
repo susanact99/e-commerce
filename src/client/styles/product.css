@@ -44,8 +44,21 @@
   border-radius: 4px;
   text-decoration: none;
   transition: background-color 0.3s;
+  margin-top: 0.2rem;
 }
 
 .product-button:hover {
-  background-color: #b08968; /* Darker beige hover effect */
+  background-color: #1d1c1c; 
+  color: white;
+}
+
+.price-rating-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #6d4c41
+}
+
+.count{
+ transform: translate(0,3px);
 }
