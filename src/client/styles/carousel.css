@@ -1,0 +1,20 @@
+.carousel-item {
+    position: relative;
+  }
+  
+  .carousel-image {
+    height: 400px;
+    object-fit: cover;
+    filter: brightness(0.8);  /* Esto aclarará ligeramente las imágenes */
+    transition: filter 0.5s ease;  /* Para suavizar el efecto cuando se cambia la imagen */
+  }
+  
+  .carousel-item .carousel-caption h5,
+  .carousel-item .carousel-caption p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Añade un poco de sombra para que las letras sean más legibles */
+  }
+  
+  .carousel-caption {
+    z-index: 2;  /* Asegura que el texto esté por encima de la imagen */
+  }
+  
