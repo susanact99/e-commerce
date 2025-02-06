@@ -1,0 +1,51 @@
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 20px;
+  background-color: #f5e6cc; /* Beige background */
+}
+
+.product-card {
+  background-color: #ffffff; /* Light beige card */
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-image {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.product-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 8px;
+  color: #6d4c41; /* Darker beige for contrast */
+}
+
+.product-price {
+  color: #8d6e63; /* Muted brown */
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.product-button {
+  display: inline-block;
+  background-color: #000000; /* Warm beige button */
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.product-button:hover {
+  background-color: #b08968; /* Darker beige hover effect */
+}
