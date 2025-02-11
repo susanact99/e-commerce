@@ -18,3 +18,9 @@
     z-index: 2;  /* Asegura que el texto esté por encima de la imagen */
   }
   
+  .nunito-font {
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }

@@ -6,6 +6,8 @@ import "../styles/productList.css";
 export function ProductList() {
   const [products, setProducts] = useState([]);
 
+  
+
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
       .then((res) => {
