@@ -29,11 +29,11 @@
   font-size: 18px;
   font-weight: bold;
   margin-top: 8px;
-  color: #6d4c41; /* Darker beige for contrast */
+  color: #000000; /* Darker beige for contrast */
 }
 
 .product-price {
-  color: #8d6e63; /* Muted brown */
+  color: #000000; /* Muted brown */
   font-size: 16px;
   margin-bottom: 8px;
 }
@@ -43,14 +43,14 @@
   background-color: #000000; /* Warm beige button */
   color: white;
   padding: 8px 12px;
-  border-radius: 4px;
+  
   text-decoration: none;
   transition: background-color 0.3s;
   margin-top: 0.2rem;
 }
 
 .product-button:hover {
-  background-color: #1d1c1c; 
+  background-color: #000000; 
   color: white;
 }
 
@@ -62,7 +62,7 @@
 }
 
 .count{
- transform: translate(0,3px);
+ color: #000000;
 }
 
 .add-cart-button{

@@ -28,21 +28,22 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-        {/*Aumentar el ancho del input*/}
-        <div>
-          <form className="d-flex " role="search">
+        
+        <div >
+          <form role="search">
             <div className="input-group ">
-              <input className="form-control" type="search" placeholder="Search..." aria-label="Search" />
-              <button className="btn btn-dark" type="submit">
-                <i className="bi bi-search text-white"></i>
+              <input className="form-control rounded-0" type="search" placeholder="Search..." aria-label="Search" />
+              <button className="btn btn-dark rounded-0" type="submit">
+                <i className="bi bi-search text-white "></i>
               </button>
             </div>
           </form>
         </div>
+         
 
-
-        <div>
-          <i className="bi bi-cart4 fs-3" ></i>
+        <div className="d-flex gap-1 mw-10">
+          <button className="btn btn-dark ">Sign in</button>
+          <i className="bi bi-cart fs-3" ></i>
         </div>
 
 

@@ -16,21 +16,21 @@ export function Carousel(props) {
             </div>
             <div className="carousel-inner">
                 <div className="carousel-item active">
-                    <img src={header1} className="d-block w-100" alt="Decoration" />
+                    <img src={header1} className="d-block w-100 carousel-image" alt="Decoration" />
                     <div className="carousel-caption d-none d-md-block">
                         <h5>Decoration</h5>
                         <p>Transform your space, elevate you life</p>
                     </div>
                 </div>
                 <div className="carousel-item">
-                    <img src={header2} className="d-block w-100" alt="Makeup" />
+                    <img src={header2} className="d-block w-100 carousel-image" alt="Makeup" />
                     <div className="carousel-caption d-none d-md-block">
                         <h5>Makeup</h5>
                         <p>Beauty begins the moment you decide to be yourself</p>
                     </div>
                 </div>
                 <div className="carousel-item">
-                    <img src={header3} className="d-block w-100" alt="Skincare" />
+                    <img src={header3} className="d-block w-100 carousel-image" alt="Skincare" />
                     <div className="carousel-caption d-none d-md-block">
                         <h5>Skicare</h5>
                         <p>Glow today, shine tomorrow!</p>
