@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Product } from "./Product";
 import "../styles/productList.css";
 
-export function ProductList() {
+export function ProductList({setCartCount,cartCount}) {
   const [products, setProducts] = useState([]);
 
   
@@ -30,7 +30,10 @@ export function ProductList() {
           title={product.title}
           price={product.price}
           rating={product.rating?.rate}
-          count={product.rating?.count} />
+          count={product.rating?.count}
+          cartCount={cartCount}
+          setCartCount={setCartCount}
+           />
       ))}
     </div>
   );

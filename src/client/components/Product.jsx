@@ -1,11 +1,15 @@
 import "../styles/product.css";
 import { StarRating } from "./StarRating.jsx";
 
-export function Product({ image, title, price, rating, count }) {
+
+
+export function Product({ image, title, price, rating, count, cartCount, setCartCount }) {
+
+
     return (
         <div className="product-card nunito-font">
             <img src={image} alt={title} className="product-image" />
-            <button className="add-cart-button"><i className="bi bi-cart-plus fs-5"></i></button>
+            <button className="add-cart-button" onClick={()=>setCartCount(cartCount +1)}><i className="bi bi-cart-plus fs-5"></i></button>
             <div className="product-title-container">
                 <h2 className="product-title" title={title}>{title}</h2>
             </div>
