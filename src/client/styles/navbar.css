@@ -85,9 +85,19 @@ body {
     border: none;
     padding: 8px 10px;
     cursor: pointer;
+    transition: .3 ease;
 }
 
+.search-bar-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
 
+.search-display-button{
+    font-weight: bolder;
+    display: none;
+}
 .user-actions {
     display: flex;
     align-items: center;
@@ -122,6 +132,7 @@ body {
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
+        transition: .3s ease;
     }
 
     .nav-links {
@@ -134,6 +145,7 @@ body {
         width: 100%;
         padding: 10px 0;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: .3s ease;
     }
 
     .nav-links.show {
@@ -143,5 +155,14 @@ body {
     .nav-links li {
         text-align: center;
         padding: 10px 0;
+    }
+
+    .search-bar{
+        display: none;
+        position: absolute;
+    }
+
+    .search-display-button{
+        display: flex;
     }
 }

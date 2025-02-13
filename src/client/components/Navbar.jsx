@@ -3,9 +3,11 @@ import { Badge } from '@mui/material';
 import '../styles/navbar.css';
 
 
-function Navbar({cartCount}) {
+function Navbar({ cartCount }) {
 
     const [toggle, setToggle] = useState(false)
+
+    const [searchBar, setSearchBar] = useState(false)
 
     return (
         <nav className="navbar">
@@ -20,10 +22,12 @@ function Navbar({cartCount}) {
                         <li><a href="#">Decoration Blog</a></li>
                     </ul>
                 </div>
-
-                <div className="search-bar">
-                    <input type="text" placeholder="Search..." />
-                    <button><i className="bi bi-search"></i></button>
+                <div className="search-bar-container">
+                    <i className="bi bi-search search-display-button" onClick={() => setSearchBar(!searchBar)}></i>
+                    <div className="search-bar" style={{ display: searchBar ? "flex" : "none" }}>
+                        <input type="text" placeholder="Search..." />
+                        <button><i className="bi bi-search"></i></button>
+                    </div>
                 </div>
 
                 <div className="user-actions">
@@ -38,12 +42,12 @@ function Navbar({cartCount}) {
                         }}
                         sx={{
                             "& .MuiBadge-badge": {
-                                backgroundColor: "#212529", 
+                                backgroundColor: "#212529",
                                 color: "white",
-                                right: "-0.2rem" 
+                                right: "-0.2rem"
                             }
                         }}
-                        >
+                    >
                         <i className="bi bi-cart"></i>
                     </Badge>
 

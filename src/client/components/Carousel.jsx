@@ -8,7 +8,7 @@ import '../styles/carousel.css';
 
 export function Carousel(props) {
     return (
-        <div id="carouselExampleCaptions" className="carousel slide nunito-font">
+        <div id="carouselExampleCaptions" className="carousel slide nunito-font" data-bs-ride="carousel">
             <div className="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
