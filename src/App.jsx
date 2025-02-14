@@ -4,6 +4,7 @@ import Navbar from './client/components/NavBar';
 import { Carousel } from './client/components/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import { Categories } from './client/components/Categories';
 
 
 
@@ -16,6 +17,7 @@ const App = () => {
         cartCount={cartCount}
        />
       <Carousel />
+      <Categories/>
       <ProductList
         cartCount={cartCount}
         setCartCount={setCartCount}

@@ -1,0 +1,28 @@
+.categories-header{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+}
+
+.categories-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    gap: .5rem;
+}
+
+.category{
+    background-color: transparent;
+    border: none;
+    border: 1px solid transparent;
+    transition: .3s ease  ;
+}
+
+.category:hover{
+    border: 1px solid black;
+}
+

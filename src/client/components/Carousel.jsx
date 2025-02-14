@@ -1,5 +1,5 @@
 import React from 'react'
-import header1 from '../assets/header1.webp'
+import header4 from '../assets/header4.webp'
 import header2 from '../assets/header2.webp'
 import header3 from '../assets/header3.webp'
 import '../styles/carousel.css';
@@ -16,7 +16,7 @@ export function Carousel(props) {
             </div>
             <div className="carousel-inner">
                 <div className="carousel-item active">
-                    <img src={header1} className="d-block w-100 carousel-image" alt="Decoration" />
+                    <img src={header4} className="d-block w-100 carousel-image" alt="Decoration" />
                     <div className="carousel-caption d-none d-md-block">
                         <h5>Decoration</h5>
                         <p>Transform your space, elevate you life</p>
