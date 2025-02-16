@@ -1,27 +1,34 @@
-import React from 'react'
-import '../styles/categories.css'
-export function Categories(props) {
+import React from 'react';
+import '../styles/categories.css';
 
-    const categories = [
-        {category:"Men's clothing",id:1},
-        {category:"Jewelery", id: 2},
-        {category:"Electronics", id:3},
-        {category:"Women's clothing",id:4},
-        {category:"Makeup",id:5},
-        {category:"Skincare",id:6},
-        {category:"Decoration",id:7}
-    ]
-    return (
-        <div className='main-container'>
-            <h5 className='categories-header'>-MAIN CATEGORIES-</h5>
-            <div className='categories-container'>{
-                categories.map((item)=>(
-                <div key={item.id} >
-                    <button className='category' onClick={categories.filter(element => element == item.category )}>{item.category}</button>
-                </div>
-                ))}
-            </div>
-        </div>
+export function Categories({ setSelectedCategory }) {
+  const categories = [
+    { category: "all", id: 0 },
+    { category: "men's clothing", id: 1 },
+    { category: "jewelery", id: 2 },
+    { category: "electronics", id: 3 },
+    { category: "women's clothing", id: 4 }
+  ];
 
-    )
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+  };
+
+  return (
+    <div className='main-container'>
+      <h5 className='categories-header'>-MAIN CATEGORIES-</h5>
+      <div className='categories-container'>
+        {categories.map((item) => (
+          <div key={item.id}>
+            <button
+              className='category'
+              onClick={() => handleCategoryClick(item.category)}
+            >
+              {item.category.charAt(0).toUpperCase() + item.category.slice(1)}
+            </button>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
