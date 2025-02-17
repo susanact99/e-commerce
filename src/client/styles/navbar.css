@@ -13,30 +13,13 @@ body {
 
 .navbar {
     background-color: #ffffff;
-    padding: 15px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 1000;
     width: 100%;
     box-sizing: border-box;
-}
-
-.container-fluid {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    box-sizing: border-box;
-}
-
-.nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-    width: 100%;
-    box-sizing: border-box;
 }
 
 .menu {
@@ -93,6 +76,7 @@ body {
     overflow: hidden;
     background: #fff;
     transition: all 0.3s ease-in-out;
+    transition: .5s ease;
 }
 
 .search-bar input {
@@ -108,18 +92,21 @@ body {
     border: none;
     padding: 8px 10px;
     cursor: pointer;
+    transition: .3s ease;
+}
+.search-bar button:hover{
+    background-color: #332e2e;
 }
 
 .search-display-button {
     font-weight: bolder;
     display: none;
     cursor: pointer;
+    font-size: 1.5rem;
 }
 
 .user-actions {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+    padding-right: 20px;
 }
 
 .bi-cart {
@@ -131,9 +118,12 @@ body {
     .navbar {
         padding: 10px;
     }
-
+    .menu{
+        width: 3rem;
+    }
     .menu-toggle {
         display: block;
+        color: #000;
     }
 
     .nav-links {
@@ -159,15 +149,20 @@ body {
 
     .search-display-button {
         display: block;
+        
     }
 
     .search-bar {
         position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
+        top: 3rem;
+        left: -5rem;
+        width: 12rem;
         display: none;
+        overflow: hidden;
+        box-shadow: 3px 3px 10px #000;
+        background-color: #000;
     }
+    
 
     .search-bar.show {
         display: flex;

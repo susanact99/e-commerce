@@ -7,13 +7,11 @@ function Navbar({ cartCount }) {
     const [searchBar, setSearchBar] = useState(false);
 
     return (
-        <nav className="navbar container-fluid">
-            <div className="container-fluid nunito-font">
+        <nav className="navbar nunito-font ">
                 <div className="menu">
                     <button
                         className="menu-toggle"
                         onClick={() => setToggle(!toggle)}
-                        style={{ color: '#000' }}
                     >
                         <i className={toggle ? "bi bi-x-lg" : "bi bi-justify"}></i>
                     </button>
@@ -32,7 +30,7 @@ function Navbar({ cartCount }) {
                     ></i>
                     <div className={`search-bar ${searchBar ? "show" : ""}`}>
                         <input type="text" placeholder="Search..." />
-                        <button><i className="bi bi-search"></i></button>
+                        <button className="search-button"><i className="bi bi-search"></i></button>
                     </div>
                 </div>
 
@@ -56,7 +54,6 @@ function Navbar({ cartCount }) {
                         <i className="bi bi-cart"></i>
                     </Badge>
                 </div>
-            </div>
         </nav>
     );
 }

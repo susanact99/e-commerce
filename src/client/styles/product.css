@@ -10,7 +10,9 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 16px;
   padding: 20px;
-  background-color: #f5e6cc; 
+  background-color: #fdfdfd;
+  width: 100%; 
+  box-sizing: border-box;
 }
 
 .product-card {
@@ -91,6 +93,7 @@
   right: 7px;
   border: none;
   transition: .3s ease;
+  color: #ffffff;
 }
 .add-cart-button:hover{
   background-color: #dddada;

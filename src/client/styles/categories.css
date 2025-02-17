@@ -26,3 +26,9 @@
     border: 1px solid black;
 }
 
+@media(max-width:992px){
+    .category{
+        color: #000;
+    }
+}
+

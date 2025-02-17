@@ -23,7 +23,6 @@ export function Categories({ setSelectedCategory }) {
             <button
               className='category'
               onClick={() => handleCategoryClick(item.category)}
-              style={{ color: '#000' }}
             >
               {item.category.charAt(0).toUpperCase() + item.category.slice(1)}
             </button>
