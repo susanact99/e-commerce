@@ -13,6 +13,7 @@ function Navbar({ cartCount }) {
                     <button
                         className="menu-toggle"
                         onClick={() => setToggle(!toggle)}
+                        style={{ color: '#000' }}
                     >
                         <i className={toggle ? "bi bi-x-lg" : "bi bi-justify"}></i>
                     </button>
