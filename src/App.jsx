@@ -7,25 +7,30 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { Filters } from './client/components/Filters';
 
 const App = () => {
-    const [cartCount, setCartCount] = useState(0);
-    const [filters, setFilters] = useState({
-        category: "all",
-        minPrice: 0,
-        maxPrice: 1000
-    });
+  const [cartCount, setCartCount] = useState(0);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filters, setFilters] = useState({
+    category: "all",
+    minPrice: 0,
+    maxPrice: 1000
+  });
 
-    return (
-        <div>
-            <Navbar cartCount={cartCount} />
-            <Carousel />
-            <Filters setFilters={setFilters} />
-            <ProductList
-                cartCount={cartCount}
-                setCartCount={setCartCount}
-                filters={filters}
-            />
-        </div>
-    );
+  return (
+    <div id='home'>
+      <Navbar
+        cartCount={cartCount}
+        setSearchTerm={setSearchTerm}
+      />
+      <Carousel />
+      <Filters setFilters={setFilters} />
+      <ProductList
+        cartCount={cartCount}
+        setCartCount={setCartCount}
+        filters={filters}
+        searchTerm={searchTerm}
+      />
+    </div>
+  );
 };
 
 export default App;

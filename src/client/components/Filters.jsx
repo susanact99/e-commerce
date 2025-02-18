@@ -3,7 +3,7 @@ import '../styles/filters.css';
 
 export function Filters({ setFilters }) {
     const [minPrice, setMinPrice] = useState(0);
-    const [maxPrice, setMaxPrice] = useState(1000);
+    const [maxPrice, setMaxPrice] = useState(500);
 
     const categories = [
         { category: "all", id: 0 },
@@ -54,26 +54,26 @@ export function Filters({ setFilters }) {
             </div>
             <div className='price'>
                 <div>
-                    <label htmlFor="priceMin">Min Price</label>
+                    <label htmlFor="priceMin">Minimum Price</label>
                     <input
                         type="range"
                         id='priceMin'
                         step={1}
                         min={0}
-                        max={1000}
+                        max={500}
                         value={minPrice}
                         onChange={handleChangeMinPrice}
                     />
                     <span>{minPrice}</span>
                 </div>
                 <div>
-                    <label htmlFor="priceMax">Max Price</label>
+                    <label htmlFor="priceMax">Maximum Price</label>
                     <input
                         type="range"
                         id='priceMax'
                         step={1}
                         min={0}
-                        max={1000}
+                        max={500}
                         value={maxPrice}
                         onChange={handleChangeMaxPrice}
                     />

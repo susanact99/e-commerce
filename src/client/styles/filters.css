@@ -22,6 +22,23 @@
     transition: .3s ease  ;
 }
 
+.price{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.price div{
+    display: flex;
+    gap: 1rem;
+}
+
+.price div label, .price div span{
+    font-weight: 600;
+}
+
 .category:hover{
     border: 1px solid black;
 }

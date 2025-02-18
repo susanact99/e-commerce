@@ -62,12 +62,12 @@
   padding: 8px 12px;
   
   text-decoration: none;
-  transition: background-color 0.3s;
+  transition:  0.5s ease;
   margin-top: 0.2rem;
 }
 
 .product-button:hover {
-  background-color: #000000; 
+  background-color: #5a5a5a; 
   color: white;
 }
 
@@ -96,6 +96,7 @@
   color: #ffffff;
 }
 .add-cart-button:hover{
-  background-color: #dddada;
+  background-color: #5a5a5a;
   border: none;
+  ;
 }
