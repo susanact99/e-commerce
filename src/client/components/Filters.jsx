@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext, useId, useState } from 'react';
 import '../styles/filters.css';
+import { FiltersContext } from '../constext/filters';
 
-export function Filters({ setFilters }) {
+export function Filters() {
     const [minPrice, setMinPrice] = useState(0);
     const [maxPrice, setMaxPrice] = useState(500);
+    const {setFilters} = useContext(FiltersContext)
+    const minPriceFilterId = useId();
+    const maxPriceFilterId = useId();
 
     const categories = [
         { category: "all", id: 0 },
@@ -54,10 +58,10 @@ export function Filters({ setFilters }) {
             </div>
             <div className='price'>
                 <div>
-                    <label htmlFor="priceMin">Minimum Price</label>
+                    <label htmlFor={minPriceFilterId}>Minimum Price</label>
                     <input
                         type="range"
-                        id='priceMin'
+                        id={minPriceFilterId}
                         step={1}
                         min={0}
                         max={500}
@@ -67,10 +71,10 @@ export function Filters({ setFilters }) {
                     <span>{minPrice}</span>
                 </div>
                 <div>
-                    <label htmlFor="priceMax">Maximum Price</label>
+                    <label htmlFor={maxPriceFilterId}>Maximum Price</label>
                     <input
                         type="range"
-                        id='priceMax'
+                        id={maxPriceFilterId}
                         step={1}
                         min={0}
                         max={500}

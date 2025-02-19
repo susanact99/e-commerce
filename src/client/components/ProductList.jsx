@@ -1,10 +1,13 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Product } from "./Product";
 import "../styles/productList.css";
+import { FiltersContext } from "../constext/filters";
 
-export function ProductList({ setCartCount, cartCount, filters, searchTerm }) {
+export function ProductList({ setCartCount, cartCount, searchTerm }) {
     const [products, setProducts] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState([]);
+    const {filters} = useContext(FiltersContext)
+
 
     useEffect(() => {
         fetch("https://fakestoreapi.com/products")
