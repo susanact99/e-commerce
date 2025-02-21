@@ -107,6 +107,7 @@ body {
 
 .user-actions {
     padding-right: 20px;
+    cursor: pointer;
 }
 
 .bi-cart {

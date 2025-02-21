@@ -4,10 +4,12 @@ import "../styles/navbar.css";
 import { SearchBar } from "./SearchBar";
 import { useCart } from "../hooks/useCart";
 
-function Navbar({ setSearchTerm }) {
+function Navbar({ setSearchTerm, setShowCart, showCart }) {
     const [toggle, setToggle] = useState(false);
     const [searchBar, setSearchBar] = useState(false);
     const {cartCount} = useCart()
+
+
 
     return (
         <nav className="navbar nunito-font ">
@@ -31,7 +33,7 @@ function Navbar({ setSearchTerm }) {
                 setSearchTerm={setSearchTerm}
             />
 
-            <div className="user-actions">
+            <div className="user-actions" onClick={()=>setShowCart(!showCart)}>
                 <Badge
                     badgeContent={cartCount}
                     overlap="circular"

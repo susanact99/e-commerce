@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react";
 import { Product } from "./Product";
-import "../styles/productList.css";
 import { FiltersContext } from "../context/filters";
 import { useCart } from "../hooks/useCart";
 
@@ -49,7 +48,7 @@ export function ProductList({ searchTerm }) {
                     />
                 ))
             ) : (
-                <h4 className="no-products-message">No products were found</h4>
+                <h4 className="no-products-message">No products were found...<i class="bi bi-search-heart"></i></h4>
             )}
         </div>
     );

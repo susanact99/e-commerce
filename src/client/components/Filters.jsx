@@ -65,6 +65,7 @@ export function Filters() {
                         max={500}
                         value={filters.minPrice}
                         onChange={handleChangeMinPrice}
+                       className="styled-range"
                     />
                     <span>{filters.minPrice}</span>
                 </div>
@@ -78,6 +79,7 @@ export function Filters() {
                         max={500}
                         value={filters.maxPrice}
                         onChange={handleChangeMaxPrice}
+                        className="styled-range"
                     />
                     <span>{filters.maxPrice}</span>
                 </div>
