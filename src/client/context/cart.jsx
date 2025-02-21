@@ -1,35 +1,55 @@
-import { createContext, useState } from "react"
+import { createContext, useEffect, useState } from "react"
 
 export const CartContext = createContext();
 
-
-export function CartProvider ({children}){
+export function CartProvider({ children }) {
     const [cart, setCart] = useState([])
     const [cartCount, setCartCount] = useState(0)
 
-
     const addToCart = (product) => {
-        const productInCartIndex = cart.findIndex(item => item.id === product.id);
+        setCart(prevCart => {
+            const productInCart = prevCart.find(item => item.id === product.id);
     
-        if (productInCartIndex >= 0) {
-            // Si el producto ya está en el carrito, solo aumenta la cantidad
-            const newCart = structuredClone(cart);
-            newCart[productInCartIndex].quantity += 1;
-            setCart(newCart);
-        } else {
-            // Si el producto NO está en el carrito, agrégalo y aumenta cartCount
-            setCart(prevCart => [...prevCart, { ...product, quantity: 1 }]);
-            setCartCount(prevCount => prevCount + 1);
-        }
+            if (productInCart) {
+                // If the product is already in the cart, increase the quantity
+                return prevCart.map(item =>
+                    item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+                );
+            } else {
+                // If the product is NOT in the cart, add it
+                return [...prevCart, { ...product, quantity: 1 }];
+            }
+        });
     };
     
+    const removeFromCart = (product) => {
+        setCart(prevCart => {
+            const productInCart = prevCart.find(item => item.id === product.id);
+            
+            if (productInCart.quantity > 1) {
+                // If quantity > 1, decrease the quantity
+                return prevCart.map(item =>
+                    item.id === product.id ? { ...item, quantity: item.quantity - 1 } : item
+                );
+            } else {
+                // If quantity is 1, remove the item from the cart
+                return prevCart.filter(item => item.id !== product.id);
+            }
+        });
+    };
+
     const clearCart = () => {
         setCart([])
-        setCartCount(0)
     }
 
-    return(
-        <CartContext.Provider value={{ cart, cartCount, addToCart, clearCart }}>
+    // Update cartCount whenever the cart changes
+    useEffect(() => {
+        const newCartCount = cart.reduce((total, item) => total + item.quantity, 0);
+        setCartCount(newCartCount);
+    }, [cart]);
+
+    return (
+        <CartContext.Provider value={{ cart, cartCount, addToCart, clearCart, removeFromCart }}>
             {children}
         </CartContext.Provider>
     )
