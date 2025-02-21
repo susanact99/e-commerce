@@ -1,9 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import { Product } from "./Product";
 import "../styles/productList.css";
-import { FiltersContext } from "../constext/filters";
+import { FiltersContext } from "../context/filters";
 
-export function ProductList({ setCartCount, cartCount, searchTerm }) {
+export function ProductList({ searchTerm }) {
     const [products, setProducts] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState([]);
     const {filters} = useContext(FiltersContext)
@@ -44,8 +44,6 @@ export function ProductList({ setCartCount, cartCount, searchTerm }) {
                       price={product.price}
                       rating={product.rating?.rate}
                       count={product.rating?.count}
-                      cartCount={cartCount}
-                      setCartCount={setCartCount}
                   />
               ))
           ) : (

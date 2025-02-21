@@ -1,11 +1,11 @@
 import React, { useContext, useId, useState } from 'react';
 import '../styles/filters.css';
-import { FiltersContext } from '../constext/filters';
+import { FiltersContext } from '../context/filters';
 
 export function Filters() {
     const [minPrice, setMinPrice] = useState(0);
     const [maxPrice, setMaxPrice] = useState(500);
-    const {setFilters} = useContext(FiltersContext)
+    const {filters, setFilters} = useContext(FiltersContext)
     const minPriceFilterId = useId();
     const maxPriceFilterId = useId();
 
@@ -25,7 +25,6 @@ export function Filters() {
     };
 
     const handleChangeMinPrice = (e) => {
-        setMinPrice(e.target.value);
         setFilters(prevFilters => ({
             ...prevFilters,
             minPrice: Number(e.target.value)
@@ -33,7 +32,6 @@ export function Filters() {
     };
 
     const handleChangeMaxPrice = (e) => {
-        setMaxPrice(e.target.value);
         setFilters(prevFilters => ({
             ...prevFilters,
             maxPrice: Number(e.target.value)
@@ -65,10 +63,10 @@ export function Filters() {
                         step={1}
                         min={0}
                         max={500}
-                        value={minPrice}
+                        value={filters.minPrice}
                         onChange={handleChangeMinPrice}
                     />
-                    <span>{minPrice}</span>
+                    <span>{filters.minPrice}</span>
                 </div>
                 <div>
                     <label htmlFor={maxPriceFilterId}>Maximum Price</label>
@@ -78,10 +76,10 @@ export function Filters() {
                         step={1}
                         min={0}
                         max={500}
-                        value={maxPrice}
+                        value={filters.maxPrice}
                         onChange={handleChangeMaxPrice}
                     />
-                    <span>{maxPrice}</span>
+                    <span>{filters.maxPrice}</span>
                 </div>
             </div>
         </section>

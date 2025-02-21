@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { Badge } from "@mui/material";
 import "../styles/navbar.css";
 import { SearchBar } from "./SearchBar";
+import { useCart } from "../hooks/useCart";
 
-function Navbar({ cartCount,setSearchTerm }) {
+function Navbar({ setSearchTerm }) {
     const [toggle, setToggle] = useState(false);
     const [searchBar, setSearchBar] = useState(false);
+    const {cartCount} = useCart()
 
     return (
         <nav className="navbar nunito-font ">
