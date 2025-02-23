@@ -3,9 +3,9 @@ import { Badge } from "@mui/material";
 import "../styles/navbar.css";
 import { SearchBar } from "./SearchBar";
 import { useCart } from "../hooks/useCart";
+import { Menu } from "./Menu";
 
 function Navbar({ setSearchTerm, setShowCart, showCart }) {
-    const [toggle, setToggle] = useState(false);
     const [searchBar, setSearchBar] = useState(false);
     const {cartCount} = useCart()
 
@@ -13,20 +13,7 @@ function Navbar({ setSearchTerm, setShowCart, showCart }) {
 
     return (
         <nav className="navbar nunito-font ">
-            <div className="menu">
-                <button
-                    className="menu-toggle"
-                    onClick={() => setToggle(!toggle)}
-                >
-                    <i className={toggle ? "bi bi-x-lg" : "bi bi-justify"}></i>
-                </button>
-                <ul className={`nav-links ${toggle ? "show" : ""}`}>
-                    <li><a href="#home" className="active">Home</a></li>
-                    <li><a href="#product-list">Shop</a></li>
-                    <li><a href="#">Skincare Blog</a></li>
-                    <li><a href="#">Decoration Blog</a></li>
-                </ul>
-            </div>
+            <Menu/>
             <SearchBar
                 searchBar={searchBar}
                 setSearchBar={setSearchBar}
