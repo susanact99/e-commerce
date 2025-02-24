@@ -48,7 +48,7 @@ export function ProductList({ searchTerm }) {
                     />
                 ))
             ) : (
-                <h4 className="no-products-message">No products were found...<i class="bi bi-search-heart"></i></h4>
+                <h4 className="no-products-message">No products were found...<i className="bi bi-search-heart"></i></h4>
             )}
         </div>
     );

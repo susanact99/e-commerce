@@ -4,6 +4,8 @@ import "../styles/navbar.css";
 import { SearchBar } from "./SearchBar";
 import { useCart } from "../hooks/useCart";
 import { Menu } from "./Menu";
+import { Link } from "react-router-dom";
+import Cart from "./Cart";
 
 function Navbar({ setSearchTerm, setShowCart, showCart }) {
     const [searchBar, setSearchBar] = useState(false);
@@ -19,7 +21,6 @@ function Navbar({ setSearchTerm, setShowCart, showCart }) {
                 setSearchBar={setSearchBar}
                 setSearchTerm={setSearchTerm}
             />
-
             <div className="user-actions" onClick={()=>setShowCart(!showCart)}>
                 <Badge
                     badgeContent={cartCount}
@@ -37,7 +38,7 @@ function Navbar({ setSearchTerm, setShowCart, showCart }) {
                         },
                     }}
                 >
-                    <i className="bi bi-cart"></i>
+                   <Link to="/cart" ><i className="bi bi-cart"></i></Link>
                 </Badge>
             </div>
         </nav>

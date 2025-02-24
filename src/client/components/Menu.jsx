@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import { Link } from 'react-router-dom';
 
 export function Menu() {
     const [toggle, setToggle] = useState(false);
@@ -13,10 +14,10 @@ export function Menu() {
                 <i className={toggle ? "bi bi-x-lg" : "bi bi-justify"}></i>
             </button>
             <ul className={`nav-links ${toggle ? "show" : ""}`}>
-                <li><a href="#home" className="active">Home</a></li>
+                <li><Link to="/" className="active">Home</Link></li>
                 <li><a href="#product-list">Shop</a></li>
-                <li><a href="#">Skincare Blog</a></li>
-                <li><a href="#">Decoration Blog</a></li>
+                <li><Link to="/skincare">Skincare Blog</Link></li>
+                <li><Link to="/decoration">Decoration Blog</Link></li>
             </ul>
         </div>
     )

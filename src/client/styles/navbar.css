@@ -20,6 +20,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 2rem;
 }
 
 .menu {
@@ -112,6 +113,7 @@ body {
 
 .bi-cart {
     font-size: 1.6rem;
+    color: #000;
 }
 
 /* Responsive */
