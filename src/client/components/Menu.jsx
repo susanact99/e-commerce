@@ -1,24 +1,20 @@
-import {useState} from 'react'
-import { Link } from 'react-router-dom';
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 export function Menu() {
-    const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(false);
 
-
-    return (
-        <div className="menu">
-            <button
-                className="menu-toggle"
-                onClick={() => setToggle(!toggle)}
-            >
-                <i className={toggle ? "bi bi-x-lg" : "bi bi-justify"}></i>
-            </button>
-            <ul className={`nav-links ${toggle ? "show" : ""}`}>
-                <li><Link to="/" className="active">Home</Link></li>
-                <li><a href="#product-list">Shop</a></li>
-                <li><Link to="/skincare">Skincare Blog</Link></li>
-                <li><Link to="/decoration">Decoration Blog</Link></li>
-            </ul>
-        </div>
-    )
+  return (
+    <div className="menu">
+      <button className="menu-toggle" onClick={() => setToggle(!toggle)}>
+        <i className={toggle ? "bi bi-x-lg" : "bi bi-justify"}></i>
+      </button>
+      <ul className={`nav-links ${toggle ? "show" : ""}`}>
+        <li><NavLink to="/" className={({ isActive }) => isActive ? "active-link" : ""}>Home</NavLink></li>
+        <li><NavLink to="/shop" className={({ isActive }) => isActive ? "active-link" : ""}>Shop</NavLink></li>
+        <li><NavLink to="/skincare" className={({ isActive }) => isActive ? "active-link" : ""}>Skincare Blog</NavLink></li>
+        <li><NavLink to="/decoration" className={({ isActive }) => isActive ? "active-link" : ""}>Decoration Blog</NavLink></li>
+      </ul>
+    </div>
+  );
 }

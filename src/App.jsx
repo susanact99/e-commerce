@@ -1,4 +1,4 @@
-import  { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ProductList from './client/components/ProductList';
 import Navbar from './client/components/NavBar';
@@ -30,10 +30,16 @@ const App = () => {
               <ProductList searchTerm={searchTerm} />
             </>
           } />
+          <Route path='/shop' element={
+            <>
+              <Filters />
+              <ProductList searchTerm={searchTerm} />
+            </>
+          } />
+          <Route path='/skincare' element={<SkincarePage />} />
+          <Route path='/decoration' element={<DecorationPage />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path='/skincare' element={<SkincarePage/>}/>
-          <Route path='/decoration' element={<DecorationPage/>}/>
-          <Route path='*' element={<NotFound/>}/>         
+          <Route path='*' element={<NotFound />} />
         </Routes>
       </Router>
     </CartProvider>

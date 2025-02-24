@@ -1,19 +1,22 @@
 .cart {
-    max-width: 600px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f8f8f8;
+    background-color: transparent;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
+    border: 1px solid #bdbdbd;
   }
   
   .cart h2 {
     text-align: center;
-    color: #333;
+    color: #3a3a3a;
     margin-bottom: 20px;
   }
   
+  .cart > button{
+    color: #e9e9e9;
+    background-color: #be0202;
+  }
   .cart-item {
     display: flex;
     justify-content: space-between;
@@ -30,29 +33,36 @@
     color: #333;
   }
   
-  .item-details p {
-    margin: 5px 0;
-    color: #666;
-  }
+.item-details{
+  display: flex;
+  gap: 1.5rem;
+}
+
+.item-details img{
+  margin-left: 1rem;
+  width: 90px;
+}
   
-  .item-quantity {
+  .item-title {
     display: flex;
-    align-items: center;
+    flex-direction: column;
   }
   
-  .item-quantity button {
-    background-color: #f0f0f0;
+  .item-total button {
+    background-color: transparent;
     border: none;
-    color: #333;
+    color: rgb(0, 0, 0);
     font-size: 16px;
     width: 30px;
     height: 30px;
     cursor: pointer;
     border-radius: 4px;
+    border:  1px solid #333 ;
+    padding: 4px;
   }
   
-  .item-quantity span {
-    margin: 0 10px;
+  .item-total span {
+    margin:  10px;
     font-weight: bold;
   }
   
@@ -60,14 +70,23 @@
     font-weight: bold;
     color: #333;
   }
-  
+
+.item-total p{
+  margin-top: 1rem;
+  margin-bottom: 0 ;
+}
+
   .cart-total {
     margin-top: 20px;
     text-align: right;
   }
+
   
   .cart-total h3 {
     color: #333;
+  }
+  .cart-total button{
+    color: #ffffff;
   }
   
   

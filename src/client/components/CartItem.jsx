@@ -1,32 +1,33 @@
 const CartItem = ({ item, updateQuantity }) => {
-    const handleIncrease = () => {
-      updateQuantity(item.id, item.quantity + 1)
+  const handleIncrease = () => {
+    updateQuantity(item.id, item.quantity + 1)
+  }
+
+  const handleDecrease = () => {
+    if (item.quantity > 1) {
+      updateQuantity(item.id, item.quantity - 1)
     }
-  
-    const handleDecrease = () => {
-      if (item.quantity > 1) {
-        updateQuantity(item.id, item.quantity - 1)
-      }
-    }
-  
-    return (
-      <div className="cart-item">
-        <div className="item-details">
-          <h3>{item.name}</h3>
-          <p>Price: ${item.price.toFixed(2)}</p>
-        </div>
-        <div className="item-quantity">
-          <button onClick={handleDecrease}>-</button>
-          <span>{item.quantity}</span>
-          <button onClick={handleIncrease}>+</button>
-        </div>
-        <div className="item-total">
-          <p>Total: ${(item.price * item.quantity).toFixed(2)}</p>
+  }
+
+  return (
+    <div className="cart-item">
+      <div className="item-details">
+        <img src={item.image} alt={item.title} />
+        <div className="item-title">
+          <h5>{item.title}</h5>
+          <spam> {item.price.toFixed(2)}$</spam>
         </div>
       </div>
-    )
-  }
-  
-  export default CartItem
-  
-  
+
+      <div className="item-total">
+        <button onClick={handleDecrease}>-</button>
+        <span>{item.quantity}</span>
+        <button onClick={handleIncrease}>+</button>
+        <p>Total: ${(item.price * item.quantity).toFixed(2)}</p>
+      </div>
+    </div>
+  )
+}
+
+export default CartItem
+

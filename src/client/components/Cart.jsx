@@ -4,7 +4,7 @@ import CartItem from "./CartItem";
 import "../styles/cart.css";
 
 const Cart = () => {
-  const { cart } = useCart();
+  const { cart, setCart, clearCart } = useCart();
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
@@ -24,7 +24,9 @@ const Cart = () => {
       ))}
       <div className="cart-total">
         <h3>Total: ${total.toFixed(2)}</h3>
+        <button>Buy now</button>
       </div>
+      <button onClick={clearCart}>Clear cart</button>
     </div>
   );
 };
