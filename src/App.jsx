@@ -23,7 +23,7 @@ const App = () => {
       <Router >
         <Navbar setSearchTerm={setSearchTerm} setShowCart={setShowCart} showCart={showCart} />
         <Routes>
-          <Route path="/" element={
+          <Route path="/e-commerce" element={
             <>
               <Carousel />
               <Filters setFilters={setFilters} />
