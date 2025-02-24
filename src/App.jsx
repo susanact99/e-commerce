@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import ProductList from './client/components/ProductList';
 import Navbar from './client/components/NavBar';
 import Cart from "./client/components/Cart";
@@ -23,7 +23,7 @@ const App = () => {
       <Router >
         <Navbar setSearchTerm={setSearchTerm} setShowCart={setShowCart} showCart={showCart} />
         <Routes>
-          <Route path="/" element={
+          <Route path="/e-commerce" element={
             <>
               <Carousel />
               <Filters setFilters={setFilters} />
