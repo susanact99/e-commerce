@@ -1,7 +1,7 @@
 import React from 'react'
-import header4 from '../assets/header4.webp'
-import header2 from '../assets/header2.webp'
-import header3 from '../assets/header3.webp'
+import header1 from '../assets/carousel/header1.jpg'
+import header6 from '../assets/carousel/header6.jpg'
+import header8 from '../assets/carousel/header8.jpg'
 import '../styles/carousel.css';
 
 {/*El carrucel no funciona*/}
@@ -16,24 +16,18 @@ export function Carousel(props) {
             </div>
             <div className="carousel-inner">
                 <div className="carousel-item active">
-                    <img src={header4} className="d-block w-100 carousel-image" alt="Decoration" />
+                    <img src={header1} className="d-block w-100 carousel-image" alt="Decoration" />
                     <div className="carousel-caption d-none d-md-block">
-                        <h5>Decoration</h5>
-                        <p>Transform your space, elevate you life</p>
                     </div>
                 </div>
                 <div className="carousel-item">
-                    <img src={header2} className="d-block w-100 carousel-image" alt="Makeup" />
+                    <img src={header6} className="d-block w-100 carousel-image" alt="Makeup" />
                     <div className="carousel-caption d-none d-md-block">
-                        <h5>Makeup</h5>
-                        <p>Beauty begins the moment you decide to be yourself</p>
                     </div>
                 </div>
                 <div className="carousel-item">
-                    <img src={header3} className="d-block w-100 carousel-image" alt="Skincare" />
+                    <img src={header8} className="d-block w-100 carousel-image" alt="Skincare" />
                     <div className="carousel-caption d-none d-md-block">
-                        <h5>Skicare</h5>
-                        <p>Glow today, shine tomorrow!</p>
                     </div>
                 </div>
             </div>

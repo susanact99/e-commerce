@@ -3,7 +3,7 @@
   }
   
   .carousel-image {
-    height: 400px;
+    height: 500px;
     object-fit: cover;
     filter: brightness(0.8);  /* Esto aclarará ligeramente las imágenes */
     transition: filter 0.5s ease;  /* Para suavizar el efecto cuando se cambia la imagen */
@@ -23,5 +23,11 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+  }
+
+  @media(max-width: 600px){
+    .carousel-image{
+      height: 450px;
+    }
   }
   

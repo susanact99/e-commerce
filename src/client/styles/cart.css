@@ -14,8 +14,8 @@
   }
   
   .cart > button{
-    color: #e9e9e9;
-    background-color: #be0202;
+    color: #0a0a0a;
+    background-color: #ef8ccf;
   }
   .cart-item {
     display: flex;
@@ -46,13 +46,13 @@
   .item-title {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
   }
   
   .item-total button {
     background-color: transparent;
-    border: none;
     color: rgb(0, 0, 0);
-    font-size: 16px;
+    font-size: 15px;
     width: 30px;
     height: 30px;
     cursor: pointer;
@@ -87,6 +87,29 @@
   }
   .cart-total button{
     color: #ffffff;
+  }
+  @media (max-width: 660px) {
+    .item-total button{
+      font-size: 15px;
+      width: 20px;
+      height: 20px;
+      padding: 0;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .item-details h5{
+      font-size: .9rem;
+    }
+
+    .item-total span{
+      margin: 5px;
+    }
+
+    .item-details img{
+      width: 80px;
+    }
+
   }
   
   
