@@ -6,9 +6,6 @@
   
   .container-log {
     width: 400px;
-    background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    border-radius: 15px;
     overflow: hidden;
     margin: 6rem auto;
   }
