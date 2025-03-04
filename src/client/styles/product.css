@@ -55,7 +55,7 @@
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 24px;
   padding: 30px;
-  background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+  background: rgba(255, 252, 249, 0.8);
   width: 100%;
   box-sizing: border-box;
   border-radius: 8px;
