@@ -12,6 +12,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { NotFound } from './client/components/NotFound';
 import LandingPage from './client/pages/LandingPage';
+import { LoginPage } from './client/pages/LogInPage';
+
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -37,6 +39,7 @@ const App = () => {
           <Route path='/skincare' element={<SkincarePage />} />
           <Route path='/decoration' element={<DecorationPage />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/login" element={<LoginPage />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </Router>

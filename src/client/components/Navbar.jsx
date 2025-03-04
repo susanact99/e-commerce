@@ -20,7 +20,7 @@ function Navbar({ setSearchTerm, setShowCart, showCart }) {
                 setSearchTerm={setSearchTerm}
             />
             <div className="user-actions" onClick={()=>setShowCart(!showCart)}>
-                <Link to="/login"><i class="bi bi-person"></i></Link>
+                <Link to="/login"><i className="bi bi-person"></i></Link>
                 <Badge
                     badgeContent={cartCount}
                     overlap="circular"
