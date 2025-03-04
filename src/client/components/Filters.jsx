@@ -39,7 +39,7 @@ export function Filters() {
     };
 
     return (
-        <section>
+        <section className='filters-container'>
             <div className='main-container'>
                 <h5 className='categories-header'>-MAIN CATEGORIES-</h5>
                 <div className='categories-container'>

@@ -1,115 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap');
+
+:root {
+  
+  --color-beige-light: #f6f2ee;
+  --color-beige: #e2dbd1;
+  --color-beige-dark: #d7cdc3;
+  --color-brown-light: #c0b2a4;
+  --color-brown: #a89683;
+  --color-brown-dark: #8a7968;
+  --color-brown-darker: #6b5b4b;
+
+  
+  --bg-gradient-start: rgba(246, 242, 238, 0.9);
+  --bg-gradient-end: rgba(240, 235, 230, 0.9);
+  --bg-card: rgba(255, 252, 249, 0.8);
+  --bg-card-hover: rgba(255, 252, 249, 0.95);
+  --bg-button: rgba(226, 219, 209, 0.8);
+  --bg-button-hover: rgba(215, 205, 195, 0.9);
+  --bg-quantity-button: rgba(226, 219, 209, 0.5);
+  --bg-quantity-button-hover: rgba(215, 205, 195, 0.7);
+
+  
+  --text-primary: #6b5b4b;
+  --text-secondary: #8a7968;
+  --text-light: #ffffff;
+
+  
+  --border-light: rgba(255, 255, 255, 0.6);
+  --border-card: rgba(226, 219, 209, 0.6);
+  --border-button: rgba(180, 170, 160, 0.3);
+
+  
+  --shadow-main: rgba(185, 175, 165, 0.16);
+  --shadow-card: rgba(180, 170, 160, 0.08);
+  --shadow-card-hover: rgba(180, 170, 160, 0.12);
+  --shadow-button: rgba(180, 170, 160, 0.1);
+  --shadow-button-hover: rgba(180, 170, 160, 0.2);
+  --shadow-image: rgba(180, 170, 160, 0.15);
+  --shadow-cta-button: rgba(168, 150, 131, 0.2);
+  --shadow-cta-button-hover: rgba(168, 150, 131, 0.3);
+
+  /* Gradientes */
+  --gradient-cta: linear-gradient(135deg, var(--color-brown-light), var(--color-brown));
+  --gradient-cta-hover: linear-gradient(135deg, var(--color-brown-light), var(--color-brown-dark));
+}
+
 .cart {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: transparent;
-    border-radius: 8px;
-    border: 1px solid #bdbdbd;
-  }
-  
-  .cart h2 {
-    text-align: center;
-    color: #3a3a3a;
-    margin-bottom: 20px;
-  }
-  
-  .cart > button{
-    color: #0a0a0a;
-    background-color: #ef8ccf;
-  }
-  .cart-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #fff;
-    border-radius: 4px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  }
-  
-  .item-details h3 {
-    margin: 0;
-    color: #333;
-  }
-  
-.item-details{
+  font-family: "Nunito", sans-serif;
+  max-width: 100%;
+  margin: 4.7rem auto;
+  padding: 2.5rem 11rem;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+  box-shadow: 0 8px 32px var(--shadow-main);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+}
+
+.nunito-font {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.cart h2 {
+  font-family: "Nunito", sans-serif;
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 1.8rem;
+}
+
+.cart > button {
+  color: var(--text-primary);
+  background-color: var(--bg-button);
+  border: 1px solid var(--border-button);
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 6px var(--shadow-button);
+}
+
+.cart > button:hover {
+  background-color: var(--bg-button-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px var(--shadow-button-hover);
+}
+
+.cart-item {
   display: flex;
-  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
+  background-color: var(--bg-card);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--shadow-card);
+  transition: all 0.4s ease;
+  border: 1px solid var(--border-card);
 }
 
-.item-details img{
-  margin-left: 1rem;
-  width: 90px;
+.cart-item:hover {
+  background-color: var(--bg-card-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px var(--shadow-card-hover);
 }
-  
-  .item-title {
-    display: flex;
+
+.item-details {
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+}
+
+.item-details img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px var(--shadow-image);
+  transition: transform 0.3s ease;
+}
+
+.item-details img:hover {
+  transform: scale(1.03);
+}
+
+.item-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item-title h5 {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.item-title spam {
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.item-total {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.item-total button {
+  background-color: var(--bg-quantity-button);
+  color: var(--text-secondary);
+  font-size: 1rem;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid var(--border-button);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.item-total button:hover {
+  background-color: var(--bg-quantity-button-hover);
+  transform: scale(1.05);
+}
+
+.item-total span {
+  margin: 0 0.5rem;
+  min-width: 1.5rem;
+  text-align: center;
+  font-size: 1.1rem;
+   font-family: "Nunito", sans-serif;
+}
+
+.item-total p {
+  margin-left: 1.5rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.1rem;
+}
+
+.cart-total {
+  margin-top: 2rem;
+  text-align: right;
+  padding: 1.5rem;
+  background-color: var(--bg-gradient-start);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--shadow-card);
+  border: 1px solid var(--border-card);
+}
+
+.cart-total h3 {
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+  font-size: 1.4rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.cart-total button {
+  color: var(--text-light);
+  background: var(--gradient-cta);
+  border: none;
+  padding: 0.75rem 2rem;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px var(--shadow-cta-button);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.cart-total button:hover {
+  background: var(--gradient-cta-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px var(--shadow-cta-button-hover);
+}
+
+@media (max-width: 660px) {
+  .cart {
+    padding: 1.75rem 1.5rem;
+    margin: 4.6rem auto;
+  }
+
+  .cart-item {
     flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .item-total button {
-    background-color: transparent;
-    color: rgb(0, 0, 0);
-    font-size: 15px;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    border-radius: 4px;
-    border:  1px solid #333 ;
-    padding: 4px;
-  }
-  
-  .item-total span {
-    margin:  10px;
-    font-weight: bold;
-  }
-  
-  .item-total {
-    font-weight: bold;
-    color: #333;
+    align-items: center;
+    text-align: center;
+    padding: 1.25rem;
+    gap: 1.25rem;
   }
 
-.item-total p{
-  margin-top: 1rem;
-  margin-bottom: 0 ;
-}
+  .item-details {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .item-details img {
+    width: 90px;
+    height: 90px;
+    margin-left: 0;
+  }
+
+  .item-title {
+    align-items: center;
+  }
+
+  .item-title h5 {
+    font-size: 1.1rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .item-total {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0.75rem;
+  }
+
+  .item-total p {
+    margin-left: auto;
+    margin-top: 0;
+  }
 
   .cart-total {
-    margin-top: 20px;
-    text-align: right;
+    padding: 1.25rem;
   }
 
-  
   .cart-total h3 {
-    color: #333;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
   }
-  .cart-total button{
-    color: #ffffff;
+
+  .cart-total button {
+    padding: 0.7rem 1.5rem;
   }
-  @media (max-width: 660px) {
-    .item-total button{
-      font-size: 15px;
-      width: 20px;
-      height: 20px;
-      padding: 0;
-      font-weight: bold;
-      text-align: center;
-    }
+}
 
-    .item-details h5{
-      font-size: .9rem;
-    }
-
-    .item-total span{
-      margin: 5px;
-    }
-
-    .item-details img{
-      width: 80px;
-    }
-
-  }
-  
-  

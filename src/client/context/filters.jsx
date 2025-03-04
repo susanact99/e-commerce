@@ -9,7 +9,7 @@ export function FiltersProvider ({children}){
     const [filters, setFilters] = useState({
         category: "all",
         minPrice: 0,
-        maxPrice: 1000
+        maxPrice: 500
       })
 
     return (

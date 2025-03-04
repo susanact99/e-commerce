@@ -11,8 +11,6 @@ function Navbar({ setSearchTerm, setShowCart, showCart }) {
     const [searchBar, setSearchBar] = useState(false);
     const {cartCount} = useCart()
 
-
-
     return (
         <nav className="navbar nunito-font ">
             <Menu/>
@@ -22,6 +20,7 @@ function Navbar({ setSearchTerm, setShowCart, showCart }) {
                 setSearchTerm={setSearchTerm}
             />
             <div className="user-actions" onClick={()=>setShowCart(!showCart)}>
+                <Link to="/login"><i class="bi bi-person"></i></Link>
                 <Badge
                     badgeContent={cartCount}
                     overlap="circular"
@@ -37,7 +36,7 @@ function Navbar({ setSearchTerm, setShowCart, showCart }) {
                             right: "-0.2rem",
                         },
                     }}
-                >
+                >  
                    <Link to="/cart" ><i className="bi bi-cart"></i></Link>
                 </Badge>
             </div>

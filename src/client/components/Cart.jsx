@@ -17,7 +17,7 @@ const Cart = () => {
   };
 
   return (
-    <div className="cart">
+    <div className="cart nunito-font">
       {cart.map((item) => (
         <CartItem key={item.id} item={item} updateQuantity={updateQuantity} />
       ))}

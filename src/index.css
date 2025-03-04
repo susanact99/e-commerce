@@ -6,11 +6,16 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Nunito";
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+body {
+  background-color: (233, 216, 214, 0.6);
 }
 
 button {
@@ -20,8 +25,11 @@ button {
   font-size: 1em;
   font-weight: 500;
   background-color: #1a1a1a;
-  transition: border-color 0.25s;
-
+  transition: 0.25s ease;
+  color: white;
+}
+button:hover{
+  transform: translateY(-3px);
 }
 
 
