@@ -34,7 +34,7 @@ export function Product({ id, image, title, price, rating, count }) {
                 rel="noopener noreferrer"
                 className="product-button"
             >
-                Buy on Amazon
+                Buy Now!
             </a>
         </div>
     );

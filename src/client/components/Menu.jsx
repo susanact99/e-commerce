@@ -9,7 +9,7 @@ export function Menu() {
       <button className="menu-toggle" onClick={() => setToggle(!toggle)}>
         <i className={toggle ? "bi bi-x-lg" : "bi bi-justify"}></i>
       </button>
-      <ul className={`nav-links animate__slideInDown animate__slideOutUp ${toggle ? "show" : ""}`}>
+      <ul className={`nav-links animate__animated  ${toggle ? "show animate__slideInDown" : ""}`}>
         <li><NavLink to="/" className={({ isActive }) => isActive ? "active-link" : ""}>Home</NavLink></li>
         <li><NavLink to="/shop" className={({ isActive }) => isActive ? "active-link" : ""}>Shop</NavLink></li>
         <li><NavLink to="/skincare" className={({ isActive }) => isActive ? "active-link" : ""}>Skincare Blog</NavLink></li>

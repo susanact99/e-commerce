@@ -1,3 +1,5 @@
+
+
 :root{
     --bg-gradient-start: rgba(246, 242, 238, 0.9);
     --bg-gradient-end: rgba(240, 235, 230, 0.9);
@@ -46,6 +48,7 @@ body {
     border: none;
     cursor: pointer;
     display: none;
+    z-index: 200;
 }
 
 .nav-links {

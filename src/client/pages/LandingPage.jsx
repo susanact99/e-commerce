@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import '../styles/landing-page.css';
+import 'animate.css';
 
 const LandingPage = () => {
   return (
