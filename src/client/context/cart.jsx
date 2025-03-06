@@ -16,8 +16,16 @@ export function CartProvider({ children }) {
                     item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
                 );
             } else {
-                // If the product is NOT in the cart, add it
+                Swal.fire({
+                    text: 'Product added to cart',
+                    icon: 'success',
+                    timer: 3000,
+                    showConfirmButton: false,
+                    background: 'rgb(245, 240, 230)',
+                    toast: true,
+                  });
                 return [...prevCart, { ...product, quantity: 1 }];
+                
             }
         });
     };
