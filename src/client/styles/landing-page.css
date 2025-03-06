@@ -56,7 +56,7 @@
 .hero-section h1 {
   font-size: 4rem;
   margin-bottom: 1.5rem;
-  color: #8a7968;
+  color: #333;
   font-weight: 500;
   letter-spacing: 1px;
   line-height: 1.2;
@@ -65,7 +65,7 @@
 .hero-section p {
   font-size: 1.6rem;
   margin-bottom: 2.5rem;
-  color: #6b5b4b;
+  color: #333;
   line-height: 1.6;
 }
 
@@ -112,7 +112,7 @@
 /* Section Titles */
 .section-title {
   font-size: 2.8rem;
-  color: #8a7968;
+  color: #333;
   margin-bottom: 3rem;
   font-weight: 500;
   letter-spacing: 1px;
@@ -129,7 +129,7 @@
   transform: translateX(-50%);
   width: 80px;
   height: 1px;
-  background-color: #c0b2a4;
+  background-color: #333;
 }
 
 /* Categories Section */
@@ -179,13 +179,13 @@
 .category-card h3 {
   font-size: 1.8rem;
   margin: 1.5rem 0 0.5rem;
-  color: #8a7968;
+  color: #333;
   font-weight: 500;
 }
 
 .category-link {
   display: inline-block;
-  color: #a89683;
+  color: #333;
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
   transition: color 0.3s ease;
@@ -193,7 +193,7 @@
 }
 
 .category-link:hover {
-  color: #6b5b4b;
+  color: #333;
 }
 
 .category-link i {
@@ -249,7 +249,7 @@
 
 .feature i {
   font-size: 2.2rem;
-  color: #a89683;
+  color: #333;
   transition: transform 0.3s ease;
 }
 
@@ -264,14 +264,14 @@
 .feature h3 {
   font-size: 1.6rem;
   margin-bottom: 1rem;
-  color: #8a7968;
+  color: #333;
   font-weight: 500;
   letter-spacing: 0.5px;
 }
 
 .feature p {
   font-size: 1.1rem;
-  color: #6b5b4b;
+  color: #333;
   line-height: 1.6;
 }
 
@@ -315,7 +315,7 @@
   font-size: 1.2rem;
   line-height: 1.8;
   margin-bottom: 2rem;
-  color: #6b5b4b;
+  color: #333;
   font-style: italic;
   text-align: left;
 }
@@ -343,7 +343,7 @@
 
 .author-info h4 {
   font-size: 1.2rem;
-  color: #8a7968;
+  color: #333;
   margin-bottom: 0.3rem;
 }
 
@@ -381,14 +381,14 @@
 
 .newsletter h2 {
   font-size: 2.8rem;
-  color: #8a7968;
+  color: #333;
   margin-bottom: 1rem;
 }
 
 .newsletter p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: #6b5b4b;
+  color: #333;
 }
 
 .newsletter-form {
@@ -404,7 +404,7 @@
   border-radius: 6px 0 0 6px;
   font-family: "Cormorant Garamond", serif;
   font-size: 1.1rem;
-  color: #6b5b4b;
+  color: #333;
   background-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -428,7 +428,7 @@
 .footer {
   background-color: #f1ece6;
   padding: 5rem 5% 2rem;
-  color: #6b5b4b;
+  color: #333;
 }
 
 .footer-content {
@@ -442,7 +442,7 @@
 
 .footer-section h3 {
   font-size: 1.5rem;
-  color: #8a7968;
+  color: #333;
   margin-bottom: 1.5rem;
   font-weight: 500;
   position: relative;
@@ -475,14 +475,14 @@
 }
 
 .footer-section ul li a {
-  color: #6b5b4b;
+  color: #333;
   text-decoration: none;
   font-size: 1.1rem;
   transition: color 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-  color: #a89683;
+  color: #333;
 }
 
 .social-icons {
@@ -498,7 +498,7 @@
   height: 40px;
   background-color: rgba(168, 150, 131, 0.1);
   border-radius: 50%;
-  color: #a89683;
+  color: #333;
   transition: all 0.3s ease;
 }
 
