@@ -19,7 +19,7 @@ export function CartProvider({ children }) {
                 Swal.fire({
                     text: 'Product added to cart',
                     icon: 'success',
-                    timer: 3000,
+                    timer: 1000,
                     showConfirmButton: false,
                     background: 'rgb(245, 240, 230)',
                     toast: true,

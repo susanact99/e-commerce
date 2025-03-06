@@ -97,6 +97,7 @@
 
 .cart-item {
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: center;
   padding: 1.25rem 1.5rem;
@@ -183,11 +184,11 @@
 }
 
 .item-total span {
-  margin: 0 0.5rem;
-  min-width: 1.5rem;
+  margin: 0;
+  min-width: 1.2rem;
   text-align: center;
   font-size: 1.1rem;
-   font-family: "Nunito", sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 .item-total p {
@@ -236,6 +237,23 @@
   background: var(--gradient-cta-hover);
   transform: translateY(-2px);
   box-shadow: 0 6px 10px var(--shadow-cta-button-hover);
+}
+
+.remove-from-cart-button{
+  width: 2rem;
+  height: 2.1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 1.2rem;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  color: var(--text-primary);
+  z-index: 10;
 }
 
 @media (max-width: 660px) {
