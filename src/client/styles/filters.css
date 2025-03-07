@@ -1,11 +1,10 @@
-
 .filters-container{
     padding: 2rem 0;
     background: rgba(255, 252, 249, 0.8);
 }
 
 .categories-header{
-    margin-top: 5rem;
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
     font-weight: 400;

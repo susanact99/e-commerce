@@ -48,7 +48,7 @@
 .cart {
   font-family: "Nunito", sans-serif;
   max-width: 100%;
-  margin: 4.7rem auto;
+  margin: 0 auto!important;
   padding: 2.5rem 11rem;
   min-height: 100vh;
   background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
