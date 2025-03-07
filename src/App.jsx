@@ -17,7 +17,6 @@ import { LoginPage } from './client/pages/LogInPage';
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const { setFilters } = useContext(FiltersContext);
   const [showCart, setShowCart] = useState(false);
 
   return (
