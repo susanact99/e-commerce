@@ -56,7 +56,8 @@
   display: grid;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   gap: 28px;
   padding: 30px;
   background: linear-gradient(to bottom, var(--bg-gradient-start), var(--bg-gradient-end));
