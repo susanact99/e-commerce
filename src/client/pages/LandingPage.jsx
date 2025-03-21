@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom"
 import "bootstrap-icons/font/bootstrap-icons.css"
 import "../styles/landing-page.css"
 import "animate.css"
+import Landing from '../assets/landing.jpg'
 import User1 from '../assets/Users/user1.jpg'
 import User2 from '../assets/Users/user2.jpg'
 import User3 from '../assets/Users/user3.jpg'
@@ -51,7 +52,7 @@ const LandingPage = () => {
           </NavLink>
         </div>
         <div className="hero-image animate__animated animate__fadeIn animate__delay-2s">
-          <img src="https://img.freepik.com/foto-gratis/senora-sensual-flor-chica-caucasica-moda-posando-planta_197531-14055.jpg?t=st=1741262673~exp=1741266273~hmac=1b020634a408c0f522d68ad7868474dd72f3976f834c3db9ac5d26247dae96ed&w=740" alt="Elegant lifestyle" />
+          <img src={Landing} alt="Elegant lifestyle" />
         </div>
       </header>
 
